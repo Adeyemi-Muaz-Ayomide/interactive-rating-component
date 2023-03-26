@@ -519,20 +519,16 @@ html {
   --tw-backdrop-sepia:  ;
 }
 
-.m-28{
-  margin: 7rem;
-}
-
-.m-4{
-  margin: 1rem;
+.m-3{
+  margin: 0.75rem;
 }
 
 .mb-6{
   margin-bottom: 1.5rem;
 }
 
-.mr-\[18\.6rem\]{
-  margin-right: 18.6rem;
+.mt-24{
+  margin-top: 6rem;
 }
 
 .mt-3{
@@ -547,10 +543,6 @@ html {
   display: flex;
 }
 
-.hidden{
-  display: none;
-}
-
 .h-12{
   height: 3rem;
 }
@@ -561,10 +553,6 @@ html {
 
 .items-center{
   align-items: center;
-}
-
-.justify-start{
-  justify-content: flex-start;
 }
 
 .justify-center{
@@ -581,14 +569,6 @@ html {
 
 .rounded-full{
   border-radius: 9999px;
-}
-
-.rounded-md{
-  border-radius: 0.375rem;
-}
-
-.border-none{
-  border-style: none;
 }
 
 .bg-additional{
@@ -615,10 +595,6 @@ html {
   padding: 0.25rem;
 }
 
-.p-12{
-  padding: 3rem;
-}
-
 .p-2{
   padding: 0.5rem;
 }
@@ -627,8 +603,8 @@ html {
   padding: 0.75rem;
 }
 
-.p-8{
-  padding: 2rem;
+.p-6{
+  padding: 1.5rem;
 }
 
 .text-center{
@@ -671,3 +647,10 @@ ul li{
   border-radius: 50%;
   background: #374151;
 }
+
+@media (min-width: 768px){
+  .md\:w-2\/4{
+    width: 50%;
+  }
+}
+
