@@ -543,12 +543,20 @@ html {
   display: flex;
 }
 
+.hidden{
+  display: none;
+}
+
 .h-12{
   height: 3rem;
 }
 
 .w-12{
   width: 3rem;
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 .items-center{
@@ -648,9 +656,17 @@ ul li{
   background: #374151;
 }
 
+.hidden{
+  display: none;
+}
+
+.hover\:bg-orange:hover{
+  --tw-bg-opacity: 1;
+  background-color: hsl(25 97% 53% / var(--tw-bg-opacity));
+}
+
 @media (min-width: 768px){
   .md\:w-2\/4{
     width: 50%;
   }
 }
-

@@ -17,3 +17,10 @@ ul li{
     background: #374151;
 }
 
+.hidden{
+    display: none;
+}
+
+.selected{
+  background-color: orange;
+}
