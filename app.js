@@ -5,10 +5,11 @@ let countLists = document.querySelectorAll('.li')
 let count = 0;
 let span = document.querySelector('.span')
 
-btnClick.addEventListener('click' , function() {
+function dissappearOnClick() {
    firstSection.classList.toggle('hidden')
    displayMsg.classList.toggle('hidden')
-})
+}
+btnClick.addEventListener('click' , dissappearOnClick)
 
 countLists.forEach(element => {
    element.addEventListener('click' , function toggleSelector() {
