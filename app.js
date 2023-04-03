@@ -1,64 +1,33 @@
-let submitBtnClick = document.getElementById('submitBtn');
-let rateBtnClick = document.getElementById('rate-again');
-let mainContainer = document.getElementById('main-container');
-let thankYouMsg = document.getElementById('thankYou-message');
-let span = document.querySelector('.span');
-let count = 0;
-let btnLists = document.querySelectorAll('.btns')
+const submitBtnClick = document.getElementById('submitBtn');
+const rateBtnClick = document.getElementById('rate-again');
+const mainContainer = document.getElementById('main-container');
+const thankYouMsg = document.getElementById('thankYou-message');
+const span = document.querySelector('.span');
+const btnList = Array.from(document.querySelectorAll('.btns'));
 
-const clickMe = () => {
-   mainContainer.classList.toggle('hidden');
-   thankYouMsg.classList.toggle('show')
+const toggleElements = (element1, element2) => {
+  element1.classList.toggle('hidden');
+  element2.classList.toggle('show');
 };
 
-submitBtnClick.addEventListener('click', clickMe)
-rateBtnClick.addEventListener('click', clickMe)
+let count = 0;
+let prevCount = 0;
 
-btnLists.forEach(btn => {
-   btn.addEventListener('click' , () => {
-      const value = this;
-      if (value.classList.Contains('selected')){
-         value.classList.toggle('selected')
-         count--;
-      } else {
-         value.classList.toggle('selected')
-         count++
-      }
-      span.textContent = count
-   })
-})
+submitBtnClick.addEventListener('click', () => {
+  toggleElements(mainContainer, thankYouMsg);
+});
 
-const fkck = 'cjkc';
-console.log(fkck)
+rateBtnClick.addEventListener('click', () => {
+  toggleElements(mainContainer, thankYouMsg);
+  span.textContent = prevCount = count = 0;
+  return count = 0;
+});
 
-
-
-// let btnClick = document.getElementById('btn');
-// let displayMsg = document.querySelector('.display-message')
-// let mainContainer = document.querySelector('.first-section')
-// let countLists = document.querySelectorAll('.li')
-// let count = 0;
-// let span = document.querySelector('.span')
-
-
-
-// function dissappearOnClick() {
-//    mainContainer.classList.toggle('hidden')
-//    displayMsg.classList.toggle('hidden')
-// }
-// btnClick.addEventListener('click' , dissappearOnClick)
-
-// countLists.forEach(element => {
-//    element.addEventListener('click' , function toggleSelector() {
-//          const value = this;
-//          if (value.classList.contains('selected')){
-//             value.classList.toggle('selected');
-//             count--
-//          } else {
-//             value.classList.toggle('selected')
-//             count++;
-//          }
-//          span.textContent = count
-//    });
-// })
+btnList.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('selected');
+    count = document.querySelectorAll('.btns.selected').length;
+    span.textContent = prevCount + count;
+  });
+});
 
