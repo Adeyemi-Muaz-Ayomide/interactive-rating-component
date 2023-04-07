@@ -28,9 +28,6 @@ btnLists.forEach(btn => {
    })
 })
 
-const fkck = 'cjkc';
-console.log(fkck)
-
 
 
 // let btnClick = document.getElementById('btn');
